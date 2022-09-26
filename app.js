@@ -21,8 +21,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var ttRouter = require('./routes/thanhvien');
+
+
+var ttRouter = require('./routes/tintuc');
 app.use('/tintuc', ttRouter);
+
+
 var tvRouter = require('./routes/thanhvien');
 app.use('/thanhvien', tvRouter);
 // catch 404 and forward to error handler
