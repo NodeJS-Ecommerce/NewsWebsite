@@ -40,10 +40,11 @@ router.post('/dangnhap_', async function(req, res) {
         var kq = bcrypt.compareSync(p, pass_fromdb);
         if (kq) {
             console.log("OK");
-            res.redirect("/");
+            res.redirect("/tintuc");
         } else {
-            console.log("Not OK");
-            res.redirect("/thanhvien/dangnhap");
+            res.render("/thanhvien/dangnhap", {
+                message: "Username or password Invalid!!!",
+            });
         }
     });
 });

@@ -29,6 +29,8 @@ app.use('/tintuc', ttRouter);
 
 var tvRouter = require('./routes/thanhvien');
 app.use('/thanhvien', tvRouter);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
